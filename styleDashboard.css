@@ -1,0 +1,101 @@
+body {
+    background-color: #23345D;
+    display: block;
+}
+
+form {
+    color: #F0ECDD;
+}
+
+table {
+    background-color: #F0ECDD;
+    margin: 0 auto;
+}
+
+.container-sticky {
+    top: 0;
+    position: sticky;
+    background-color: #F0ECDD;
+    border-top: 1px solid black;
+    box-shadow: 0 1px 0 rgba(97, 96, 96, 0.475);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+h4 {
+    color: #F0ECDD;
+    display: flex;
+    justify-content: center;
+}
+
+h6 {
+    color: #F0ECDD;
+    margin-left: 15%;
+}
+
+.add {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-left: 15%;
+    
+}
+
+.add:hover {
+    background-color: #1d4ed8;
+}
+
+.update {
+    text-decoration: none;
+    padding: 2px 5px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.update:hover {
+    background-color: white;
+    color: green;
+    outline: 2px solid green;
+    padding: 2px 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.delete {
+    text-decoration: none;
+    padding: 2px 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+.delete:hover {
+    background-color: white;
+    color: red;
+    outline: 2px solid red;
+    padding: 2px 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.table-container {
+    width: 70%;
+    max-height: 320px;
+    margin: 0 auto;
+    overflow-y: auto;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}

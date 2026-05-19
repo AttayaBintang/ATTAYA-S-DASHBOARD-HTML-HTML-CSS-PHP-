@@ -10,22 +10,46 @@ $data = mysqli_query($connect, $db);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleDashboard.css">
     <title>Homepage</title>
 </head>
 <body>
     <h1>DEMO CRUD PHP</h1>
+    <h4>Daftar Nama Teman</h4>
 
-    <a href="http://localhost/DASHBOARD%20HTML/insert_data.php">Add</a>
-    <table border="1" cellspacing="0" width="70%" height="10%">
-        <tr>
-            <th>NO</th>
-            <th>first_name</th>
-            <th>last_name</th>
-            <th>age</th>
-            <th>id</th>
-            <th>Update</th>
-            <th>Delete</th>
-        </tr>
+    <a class="add" href="http://localhost/DASHBOARD%20HTML/insert_data.php">Add</a>
+    <div class="table-container">
+        <table border="1" cellpadding="10" cellspacing="0" width="70%" height="10%">
+            <thead class="container-sticky">
+                <tr>
+                    <th>NO</th>
+                    <th>Nama Panggilan</th>
+                    <th>Nama lengkap</th>
+                    <th>Umur</th>
+                    <th>id</th>
+                    <th>Aksi</th>
+                    <!-- <th>Delete</th> -->
+                </tr>
+            </thead>
+            <?php
+                $no = 1; // Buat variabel counter
+                while($row = mysqli_fetch_assoc($data)) :; 
+            ?>
+            <tbody>
+            <tr>
+                <td><?= $no++ ?></td> <!-- Nomor akan selalu urut di tampilan -->
+                <td><?= $row['first_name']?></td>
+                <td><?= $row['last_name']?></td>
+                <td><?= $row['age']?></td>
+                <td><?= $row['id']?></td>
+                <td>
+                    <a href="http://localhost/DASHBOARD%20HTML/update_data.php?id=<?php echo $row['id']?>" class="update">Edit</a>
+                    <a href="http://localhost/DASHBOARD%20HTML/delete_data.php?id=<?php echo $row['id']?>" class="delete">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+            <?php endwhile; ?>
+
 
         <?php
         $no = 1; // Buat variabel counter
@@ -37,12 +61,16 @@ $data = mysqli_query($connect, $db);
                 <td><?= $row['last_name']?></td>
                 <td><?= $row['age']?></td>
                 <td><?= $row['id']?></td>
-                <td><a href="http://localhost/DASHBOARD%20HTML/update_data.php?id=<?php echo $row['id']?>">Update</a></td>
-                <td><a href="http://localhost/DASHBOARD%20HTML/delete_data.php?id=<?php echo $row['id']?>">Delete</a></td>
+                <td>
+                    <a href="http://localhost/DASHBOARD%20HTML/update_data.php?id=<?php echo $row['id']?>" class="update">Update</a>
+                    <a href="http://localhost/DASHBOARD%20HTML/delete_data.php?id=<?php echo $row['id']?>" class="delete">Delete</a>
+                </td>
             </tr>
         <?php endwhile; ?>
 
-    </table>
+        </table>
+    </div>
+
 
     <?php
     if(isset($_GET['message'])){

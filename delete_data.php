@@ -3,7 +3,7 @@ include "crud_web.php";
 
 if(isset($_GET['id'])){
     $id = $_GET['id'];
-    $query = "DELETE FROM `students` WHERE `students` . `id` = '$id'";
+    $query = "DELETE FROM `students` WHERE `students`.`id` = '$id'";
 
     $result = mysqli_query($connect, $query);
 
@@ -11,8 +11,10 @@ if(isset($_GET['id'])){
         die("QUERY FAILED".mysqli_error());
     }
     else{
-        header('location:dashboard.php?delete_msg=You have deleted the data');
+        header('location:dashboard.php?delete_msg=YOU HAVE DELETED THE DATA');
     }
 }
 
 ?>
+
+<!-- `students` . -->

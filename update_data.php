@@ -14,7 +14,7 @@ if(isset($_GET['id'])){
     }
     else{
         $row = mysqli_fetch_assoc($data);
-        print_r($row);
+        // print_r($row);
     }
 
 }
@@ -37,16 +37,29 @@ if(isset($_POST['update_students'])){
         
     }
     else{
-        header('location:dashboard.php?update_msg=recent data updated');
+        header('location:dashboard.php?update_msg=RECENT DATA UPDATED');
     }
 }
   
 ?>
 
-
-<<form action="update_data.php?id_new=<?php echo $id; ?>" method="post">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleUpdateData.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="update_data.php?id_new=<?php echo $id; ?>" method="post">
+    <label for="first_name">Nama Panggilan:</label>
     <input type="text" name="first_name" value="<?php echo $row['first_name'];?>" required>
+    <label for="last_name">Nama lengkap:</label>
     <input type="text" name="last_name" value="<?php echo $row['last_name'];?>" required>
+    <label for="age">Umur:</label>
     <input type="number" name="age" value="<?php echo $row['age'];?>" required>
     <button type="submit" name="update_students">Update Data</button>
 </form>
+</body>
+</html>

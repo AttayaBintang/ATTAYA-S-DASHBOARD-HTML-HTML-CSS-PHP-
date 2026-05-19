@@ -14,7 +14,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     die("QUERY FAILED".mysqli_error($connect));
     }
     else{
-        header('location:dashboard.php?insert_msg=New Data Has Been Added');
+        header('location:dashboard.php?insert_msg=NEW DATA HAS BEEN ADDED');
     }
 }
 $db = "SELECT * FROM students";
@@ -26,15 +26,19 @@ $data = mysqli_query($connect, $db);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleInsertData.css">
     <title>Document</title>
 </head>
 <body>
     <form action="" method="post">
-    <input type="text" name="first_name" placeholder="ur first name here" required>
-    <input type="text" name="last_name" placeholder="ur last name here" required>
-    <input type="number" name="age" placeholder="ur age here" required>
+    <label for="first_name">Nama Panggilan:</label><br>
+    <input type="text" name="first_name" placeholder="..." required><br>
+    <label for="last_name">Nama Lengkap:</label><br>
+    <input type="text" name="last_name" placeholder="..." required><br>
+    <label for="age">Umur:</label><br>
+    <input type="number" name="age" placeholder="..." required><br>
 
-    <button type="submit">kirim</button>
+    <button type="submit">Add</button>
         
     </form>
 </body>

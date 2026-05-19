@@ -20,11 +20,10 @@
 require_once 'login_web.php'; 
 
 if(isset($_POST['login'])){ //'login' berasal dari submit's "name"
-    $username = $_POST['username'];
     $email = $_POST['gmail'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM `user` WHERE `username`='$username' AND `gmail`='$email' AND `password`='$password'";
+    $sql = "SELECT * FROM `user` WHERE `gmail`='$email' AND `password`='$password'";
     $result = mysqli_query($connect, $sql);
     $data = mysqli_fetch_assoc($result);
 
@@ -35,7 +34,7 @@ if(isset($_POST['login'])){ //'login' berasal dari submit's "name"
     }
 }
 ?>
-
+-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,7 +42,7 @@ if(isset($_POST['login'])){ //'login' berasal dari submit's "name"
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleIndex.css">
 </head>
 
 <body>
@@ -58,9 +57,7 @@ if(isset($_POST['login'])){ //'login' berasal dari submit's "name"
         <h1>LOGIN</h1>
 
         <form action="index.php" method="post">
-            <label for="username">Username:</label><br>
-            <input type="text" name="username" placeholder="Enter Your Username" required><br><br>
-            <label for="gmail">Gmail:</label><br>
+            <label for="gmail">Email:</label><br>
             <input type="email" name="gmail" placeholder="Enter Your Gmail" required><br><br>
             <label for="password">Password:</label><br>
             <input type="password" name="password" placeholder="Enter Your Password" required><br><br>

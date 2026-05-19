@@ -11,6 +11,6 @@ if(!$connect){
     die("unable to connect");
 }
 else{
-    echo "Was Connected";
+    // echo "Was Connected";
 }
 ?>

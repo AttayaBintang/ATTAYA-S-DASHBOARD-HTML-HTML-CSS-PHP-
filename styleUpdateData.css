@@ -1,0 +1,33 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #23345D;
+}
+
+form {
+    width: 300px;
+    padding: 20px;
+}
+
+label {
+    max-width: 1000px;
+    color: #F0ECDD;
+    width: 100%;
+}
+
+input {
+    max-width: 1000px;
+    padding: 2vh;
+    width: 100%;
+    height: fit-content;
+    border-radius: 30px;
+}
+
+button {
+    padding: 2vh;
+    border-radius: 30px;
+    background-color: #F0ECDD;
+}
