@@ -81,25 +81,6 @@ $data = mysqli_query($connect, $db);
             </tr>
             </tbody>
             <?php endwhile; ?>
-
-
-        <?php
-        $no = 1; // Buat variabel counter
-        while($row = mysqli_fetch_assoc($data)) :; 
-        ?>
-            <tr>
-                <td><?= $no++ ?></td> <!-- Nomor akan selalu urut di tampilan -->
-                <td><?= $row['first_name']?></td>
-                <td><?= $row['last_name']?></td>
-                <td><?= $row['age']?></td>
-                <td><?= $row['id']?></td>
-                <td>
-                    <a href="http://localhost/DASHBOARD%20HTML/update_data.php?id=<?php echo $row['id']?>" class="update">Update</a>
-                    <a href="http://localhost/DASHBOARD%20HTML/delete_data.php?id=<?php echo $row['id']?>" class="delete">Delete</a>
-                </td>
-            </tr>
-        <?php endwhile; ?>
-
         </table>
     </div>
 
