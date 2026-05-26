@@ -1,6 +1,128 @@
 body {
     background-color: #23345D;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
+    display: flex;
+}
+
+/* BAGIAN KIRI */
+
+.left {
+    width: 100%;
+    max-width: 200px;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #001346;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    max-width: 50px;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo h6 {
+    font-family: serif;
+    font-size: large;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+    padding: 0;
+    margin: 60px auto 0;
+}
+
+.list a {
     display: block;
+    text-decoration: none;
+    color: #F0ECDD;
+    padding: 12px 14px;
+    border-top: 1px solid rgba(240, 236, 221, 0.35);
+    border-radius: 0px;
+    background-color: #08205d;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.list a:hover {
+    background-color: #F0ECDD;
+    color: #001346;
+    border-color: #F0ECDD;
+}
+
+.list li {
+    list-style: none;
+}
+
+.quote {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 24px;
+}
+
+/* BAGIAN TENGAH */
+.right {
+    display: block;
+    margin: auto;
+}
+
+.navbar {
+    display: flex;
+}
+
+.search-input {
+    padding: 10px 100px;
+    width: 100%;
+    max-width: 100px;
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    /* width: 100%; */
+    max-width: 990px;
+    height: 150px;
+    padding: 10px;
+    background-color: darkblue;
+    border-radius: 25px;
+    column-gap: 10px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.leftHeader {
+    display: block;
+    width: 800px;
+}
+
+.leftHeader h3 {
+    color: #F0ECDD;
+}
+
+.rightHeader {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin-top: 0px;
+    position: absolute;
+    right: 5px;
+    bottom: 0;
 }
 
 form {
@@ -10,6 +132,7 @@ form {
 table {
     background-color: #F0ECDD;
     margin: 0 auto;
+    width: 50vh;
 }
 
 .container-sticky {
@@ -22,7 +145,7 @@ table {
 
 h1 {
     display: flex;
-    justify-content: center;
+    justify-content: first baseline;
 }
 
 h4 {
@@ -33,7 +156,7 @@ h4 {
 
 h6 {
     color: #F0ECDD;
-    margin-left: 15%;
+    /* margin-left: ; */
 }
 
 .add {
@@ -46,8 +169,7 @@ h6 {
     font-weight: 600;
     border: none;
     cursor: pointer;
-    margin-left: 15%;
-    
+    /* margin-left: ; */
 }
 
 .add:hover {
@@ -89,13 +211,13 @@ h6 {
 }
 
 .table-container {
-    width: 70%;
-    max-height: 320px;
+    /* width: 70%; */
+    max-height: 400px;
     margin: 0 auto;
     overflow-y: auto;
 }
 
 .table-container table {
-    width: 100%;
+    width: 1000px;
     border-collapse: collapse;
 }

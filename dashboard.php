@@ -14,8 +14,40 @@ $data = mysqli_query($connect, $db);
     <title>Homepage</title>
 </head>
 <body>
-    <h1>DEMO CRUD PHP</h1>
-    <h4>Daftar Nama Teman</h4>
+    <section>
+    <div class="left">
+        
+        <div>
+            <div class="logo"><img src="daunLogo.png" alt=""><h6>friend.</h6></div>
+            <ul class="list">
+                <li><a href="http://localhost/DASHBOARD%20HTML/dashboard.php">Dashboard</a></li>
+                <li><a href="">Calendar</a></li>
+                <li><a href="">About Website</a></li>
+                <li><a href="http://localhost/DASHBOARD%20HTML/">Log Out</a></li>
+            </ul>
+        </div>
+        <div class="quote">
+        <h4>"humans are social creatures"</h4>
+        </div>
+    </div>
+
+    </div>
+    <div class="right">
+        <div class="navbar">
+            <h1 style="color:white;">List Of Names</h1>
+
+        </div>
+    <div class="header">
+        <div class="leftHeader">
+            <h3>Hello Friend!</h3>
+            <h4>Keep gathering your friend's name in this website to always remember who they are, keep your friend's honor. 
+            It is important because relationships are important for your survivability in this era.</h4>
+            <h6>“Names are the sweetest and most important sound in any language.” - Dale Carnegie's "How To Win Friends And Influence People"</h6>
+        </div>
+        <div class="rightHeader">
+            <img src="Johnny_Joestar.png" alt="">
+        </div>
+    </div>
 
     <a class="add" href="http://localhost/DASHBOARD%20HTML/insert_data.php">Add</a>
     <div class="table-container">
@@ -95,6 +127,10 @@ $data = mysqli_query($connect, $db);
         echo "<h6>".$_GET['update_msg']."</h6>";
     }
     ?>
+
+    </div>
+    </section>
+
 
 </body>
 </html>
